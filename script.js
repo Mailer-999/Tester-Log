@@ -25,9 +25,10 @@ loginButton.addEventListener("click", function() {
     if (employeeID.value !== correctEmployeeID) {
     alert("รหัสพนักงานไม่ถูกต้อง");
     return;
-}
+    }
 if (password.value !== correctPassword) {
     alert("รหัสผ่านไม่ถูกต้อง");
     return;
-}
+    }
+    alert("Login สำเร็จ);
 });
