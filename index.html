@@ -1,29 +1,33 @@
-<!DOCTYPE html>
-<html>
+const correctEmployeeID = "224236";
+const correctPassword = "01234";
+const employeeID = document.getElementById("รหัสพนง.");
+const department = document.getElementById("แผนก");
+const password = document.getElementById("รหัส");
+const loginButton = document.getElementById("loginButton");
 
-<head>
-    <title>เทสล็อคงับ</title>
-</head>
+loginButton.addEventListener("click", function() {
 
-<body>
+    if (employeeID.value === "") {
+        alert("กรุณากรอกรหัสพนักงาน");
+        return;
+    }
 
-    <h1>Login Log Test System</h1>
+    if (department.value === "") {
+        alert("กรุณากรอกแผนก");
+        return;
+    }
 
-    <label>ใส่รหัสพนักงานเลยคับสู</label>
-    <br>
-    <input type="text" id="รหัสพนง.">
-    <br><br>
-    <label>ตรงนี้ใส่แผนกนะ</label>
-    <br>
-    <input type="text" id="แผนก">
-    <br><br>
-    <label>อันนี้รหัสเฉยๆไม่ใช่รหัสพนักงานนะจ๊ะ</label>
-    <br>
-    <input type="password" id="รหัส">
-    <br><br><br>
+    if (password.value === "") {
+        alert("กรุณากรอกรหัสผ่าน");
+        return;
+    }
 
-    <button id="loginButton">ล็อคอินนน</button>
-<script src="script.js"></script>
-</body>
-
-</html>
+    if (employeeID.value !== correctEmployeeID) {
+    alert("รหัสพนักงานไม่ถูกต้อง");
+    return;
+}
+if (password.value !== correctPassword) {
+    alert("รหัสผ่านไม่ถูกต้อง");
+    return;
+}
+});
